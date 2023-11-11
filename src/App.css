@@ -52,11 +52,25 @@ h2 {
 
 .techstackitem {
   background-color: var(--color-primary);
+color: var(--font-color-primary);
+}
+
+.pill {
   padding: 0.5rem 1rem;
-  border-radius: 16px;
+    border-radius: 16px;
+}
+
+.toolsitem {
+background-color: #FAFF81;
+color: #000
+}
+
+.clientitem {
+background-color: #FFC53A;
+color: #000
 }
 
 .techstacklink {
   text-decoration: none;
-  color: var(--font-color-primary);
+  color: inherit
 }
