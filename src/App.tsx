@@ -63,7 +63,7 @@ function App() {
         <h2>
           About me:
         </h2>
-        <p>
+        <p className='aboutme'>
           I was born in 1987 in{' '}
           <a href='https://en.wikipedia.org/wiki/Leipzig' target='_blank' rel="noreferer noopener">
             Leipzig, Germany
