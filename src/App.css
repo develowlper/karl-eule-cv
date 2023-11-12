@@ -10,6 +10,18 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #FAFF81
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  a {
+    color: var(--color-primary);
+  }
+}
+
 .profilepic {
   border-radius: 50%;
   width: 150px;
