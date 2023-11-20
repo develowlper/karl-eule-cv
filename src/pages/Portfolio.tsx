@@ -17,14 +17,16 @@ const privat = [{
   link: 'https://hochzeit.karl-eule.de',
   description: 'Für die Hochzeit von Freunden habe ich eine Fotoseite gebaut. Das Password lautet "28.08.2021".',
   github: 'https://github.com/develowlper/hochzeit-f-und-f',
-  tags: ['SSR', 'React', 'NextJS', 'DigitalOcean Spaces', 'AWS-SDK']
+  tags: ['SSR', 'React', 'NextJS', 'DigitalOcean Spaces', 'AWS-SDK'],
+  isActive: false
 },
 {
   headline: 'Profil und Portfolio',
   link: 'https://profile.karl-eule.de',
   description: 'Für euch habe eine Seite mit meinem Profil und Portfolio gebaut. ;-)',
   github: 'https://github.com/develowlper/karl-eule-cv',
-  tags: ['SPA', 'React', 'React Router', 'Vite', 'Netlify']
+  tags: ['SPA', 'React', 'React Router', 'Vite', 'Netlify'],
+  isActive: true
 }]
 
 
@@ -62,7 +64,7 @@ export default function Portfolio(): React.ReactNode {
     <p>
       Hier sind ein paar Projekte, die ich privat gemacht habe.
     </p>
-    {privat.map((item) => {
+    {privat.filter(x => x.isActive).map((item) => {
       return <div key={item.link}>
         <a href={item.link}>
           <h3>
