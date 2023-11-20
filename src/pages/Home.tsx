@@ -1,4 +1,4 @@
-import './Home.css'
+import Header from "../components/Header"
 
 type Tech = {
   name: string
@@ -118,12 +118,6 @@ function HomePage(): React.ReactNode {
 
   return (
     <>
-      <header className='header'>
-        <img className="profilepic" src="/profile.webp" alt="Daniel Schulz" />
-        <h1>
-          Hi, i'm Daniel. I'm a fullstack developer from Leipzig.
-        </h1>
-      </header>
       <main>
         <h2>
           Techstack:
