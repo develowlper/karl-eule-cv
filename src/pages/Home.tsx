@@ -1,4 +1,4 @@
-import './App.css'
+import './Home.css'
 
 type Tech = {
   name: string
@@ -114,7 +114,7 @@ const clients: Tech[] = [
   }
 ]
 
-function App() {
+function HomePage(): React.ReactNode {
 
   return (
     <>
@@ -209,4 +209,5 @@ function App() {
   )
 }
 
-export default App
+export default HomePage
+
