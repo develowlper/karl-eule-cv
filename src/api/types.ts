@@ -7,3 +7,8 @@ export type PortfolioItem = {
   tags: string[];
   githubLink?: string;
 }
+
+export type Tech = {
+  name: string
+  url: string
+}
