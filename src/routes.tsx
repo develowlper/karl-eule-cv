@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import HomePage from "./pages/Home";
-import PortfolioPage from "./pages/Portfolio";
+import PortfolioPage, { loader as portfolioLoader } from "./pages/Portfolio";
 import Root from "./pages/Root";
 const routes: RouteObject[] = [
   {
@@ -13,7 +13,8 @@ const routes: RouteObject[] = [
       },
       {
         path: '/portfolio',
-        element: <PortfolioPage />
+        element: <PortfolioPage />,
+        loader: portfolioLoader
       }
     ]
   },

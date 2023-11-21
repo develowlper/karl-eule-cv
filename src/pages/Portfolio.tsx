@@ -1,62 +1,47 @@
+import { useLoaderData } from 'react-router-dom'
+import { getClientProjects } from '../api/clientProjects'
+import { PortfolioItem } from '../api/types'
+import PortfolioItemComponent from '../components/PortfolioItem'
+
 import './Portfolio.css'
+import { getWebArProjects } from '../api/webArProjects'
+import { getPrivateProjects } from '../api/privateProjects'
 
-const webARItems = [{
-  headline: 'Shopping Queen',
-  link: "https://shopping-queen.sensape.com/",
-  description: 'Shopping Queen ist eine WebAR-App, mit der man ein Foto mit Guido Maria Kretschmer machen kann. Am besten mit einem Mobilgerät benutzen.',
-  tags: ['SPA', 'React', 'React Router', 'AWS S3']
-}, {
-  headline: 'Lavazza',
-  link: 'https://www.lavazza-selfie.com',
-  description: 'Für Lavazza wurde eine WebAR-App gebaut, mit der man Fotos vor typisch italinenischen Hintergründen machen kann.',
-  tags: ['SPA', 'React', 'React Router', 'Tensorflow.js', 'AWS S3']
-}]
 
-const privat = [{
-  headline: 'Hochzeit',
-  link: 'https://hochzeit.karl-eule.de',
-  description: 'Für die Hochzeit von Freunden habe ich eine Fotoseite gebaut. Das Password lautet "28.08.2021".',
-  github: 'https://github.com/develowlper/hochzeit-f-und-f',
-  tags: ['SSR', 'React', 'NextJS', 'DigitalOcean Spaces', 'AWS-SDK'],
-  isActive: false
-},
-{
-  headline: 'Profil und Portfolio',
-  link: 'https://profile.karl-eule.de',
-  description: 'Für euch habe eine Seite mit meinem Profil und Portfolio gebaut. ;-)',
-  github: 'https://github.com/develowlper/karl-eule-cv',
-  tags: ['SPA', 'React', 'React Router', 'Vite', 'Netlify'],
-  isActive: true
-}]
 
+
+type LoaderData = {
+  clientProjects: PortfolioItem[]
+  webARProjects: PortfolioItem[]
+  privateProjects: PortfolioItem[]
+}
+
+export const loader = async (): Promise<LoaderData> => {
+  return { clientProjects: await getClientProjects(), webARProjects: await getWebArProjects(), privateProjects: await getPrivateProjects() }
+}
 
 export default function Portfolio(): React.ReactNode {
+
+  const { clientProjects, webARProjects, privateProjects } = useLoaderData() as LoaderData
+
   return <main>
     <h2>
       WebAR @ Sensape
     </h2>
     <p>
-      Bei den beiden WebAr Apps habe ich basierend auf einem Design die WebAR-Apps gebaut. Die Apps sind mit React und React Router gebaut. Die App für Lavazza hat zusätzlich noch eine Integration von Tensorflow.js, um den Bildhintergrund zu erkennen und zu tauschen.
+      Bei den beiden WebAR-Projekten, die ich programmiert habe, bestand meine Hauptaufgabe darin, basierend auf spezifischen Design-Vorgaben die WebAR-Anwendungen zu erstellen. Für die Umsetzung nutzte ich React und React Router für ein komfortables Seitennavigations-Erlebnis. Besonders hervorzuheben ist die Lavazza-App, die eine zusätzliche Integration von TensorFlow.js aufweist. Dank TensorFlow.js kann diese Anwendung den Bildhintergrund der Nutzer:innen in Echtzeit erkennen und tauschen.
     </p>
-    {webARItems.map((item) => {
-      return <div key={item.link}>
-        <a href={item.link}>
-          <h3>
-            {item.headline}
-          </h3>
-        </a>
-        <p>
-          {item.description}
-        </p>
-        <label>
-          Tech:
-        </label>
-        <ul className="tags">
-          {item.tags.map((tag) => {
-            return <li className='tag-item' key={tag}>{tag}</li>
-          })}
-        </ul>
-      </div>
+    {webARProjects.map((item) => {
+      return <PortfolioItemComponent key={item.key} item={item} />
+    })}
+    <h2>
+      Kundenprojekte @ Sensape
+    </h2>
+    <p>
+      Während meiner Zeit bei Sensape entwickelte ich eine AR-App für den FC Bayern München Fanshop, die es Fans ermöglicht, sich virtuell mit ihren Lieblingsspielern zu fotografieren, und eine App für Rheem, die Nutzer:innen anhand eines Quiz unterstützt, eine geeignete Gastherme zu identifizieren. Beide Apps sind auf Benutzerfreundlichkeit fokussiert und bedienen täglich eine breite Palette von Benutzern, von wenigen bis zu mehreren Tausend.
+    </p>
+    {clientProjects.map((item) => {
+      return <PortfolioItemComponent key={item.key} item={item} />
     })}
     <h2>
       Privat
@@ -64,29 +49,8 @@ export default function Portfolio(): React.ReactNode {
     <p>
       Hier sind ein paar Projekte, die ich privat gemacht habe.
     </p>
-    {privat.filter(x => x.isActive).map((item) => {
-      return <div key={item.link}>
-        <a href={item.link}>
-          <h3>
-            {item.headline}
-          </h3>
-        </a>
-        <p>
-          {item.description}
-        </p>
-        <p>
-          Den Source Code des Projekts findet ihr bei <a href={item.github}>Github</a>
-        </p>
-        <label>
-          Tech:
-        </label>
-        <ul className="tags">
-          {item.tags.map((tag) => {
-            return <li className='tag-item' key={tag}>{tag}</li>
-          })}
-        </ul>
-      </div>
+    {privateProjects.filter(x => x.isActive).map((item) => {
+      return <PortfolioItemComponent key={item.key} item={item} />
     })}
   </main >
 }
-
