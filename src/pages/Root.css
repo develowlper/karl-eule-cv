@@ -1,18 +1,21 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+main {
   padding: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  #root {
+  main {
     padding: 1rem;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   a {
-    color: #FAFF81
+    color: #faff81;
   }
 }
 
@@ -40,11 +43,18 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 1rem
+  gap: 1rem;
+  padding: 0rem 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0rem 1rem;
+  }
 }
 
 h1 {
-  flex: 1
+  flex: 1;
 }
 
 h2 {
@@ -73,26 +83,18 @@ h2 {
 }
 
 .toolsitem {
-  background-color: #FAFF81;
-  color: #000
+  background-color: #faff81;
+  color: #000;
 }
 
 .clientitem {
-  background-color: #FFC53A;
-  color: #000
+  background-color: #ffc53a;
+  color: #000;
 }
 
 .techstacklink {
   text-decoration: none;
-  color: inherit
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: large;
+  color: inherit;
 }
 
 .active {
