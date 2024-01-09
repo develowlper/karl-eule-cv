@@ -1,7 +1,4 @@
-import getTechstack from "../api/techstack"
 import { Tech } from "../api/types"
-
-const techstack = getTechstack();
 
 const tools: Tech[] = [
   {
