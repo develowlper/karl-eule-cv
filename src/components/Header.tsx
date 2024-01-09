@@ -1,3 +1,4 @@
+import './Header.css'
 import getTechstack from "../api/techstack"
 
 const techstack = getTechstack();
@@ -11,10 +12,10 @@ export default function Header() {
       </h1>
     </header>
     <div className="techstack-header">
-      <h2 >
+      <h2>
         Techstack:
       </h2>
-      <ul className='techstack '>
+      <ul className='techstack'>
         {techstack.map((tech, index) => (
           <li className='pill techstackitem' data-index={index} key={tech.name}>
             <a className='techstacklink' href={tech.url} target='_blank' rel="noopener noreferer">
