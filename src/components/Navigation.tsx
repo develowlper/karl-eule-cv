@@ -10,5 +10,8 @@ export default function Navigation() {
     <NavLink className={({ isActive }) =>
       isActive ? "active" : ""
     } to="/portfolio">Portfolio</NavLink>
+    <NavLink className={({ isActive }) =>
+      isActive ? "active" : ""
+    } to="/cv">CV</NavLink>
   </nav>
 }
