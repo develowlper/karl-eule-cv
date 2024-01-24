@@ -18,7 +18,7 @@ export default function CV() {
       <section style={{ marginBottom: '20px' }}>
         <h2>Professional Summary</h2>
         <p>
-          As an adept software engineer specializing in web development, I carry a proven track record of crafting high-quality, innovative solutions that leverage the power of modern web technologies like React, JavaScript, and Node.js. Stemming from a strong academic background with a Master's in Computer Visualistics and a Bachelor's in Computer Science, I have honed my skills through diverse roles that ranged from creating Olympic timing software using C# and WPF to developing engaging front-end experiences for global brands. With an analytical approach to problem-solving and a keen eye for user-centric design, my portfolio showcases a suite of applications that are as intuitive as they are impactful.
+          As an adept software engineer specializing in web development, I carry a proven track record of crafting high-quality, innovative solutions that leverage the power of modern web technologies like React, TypeScript, and Node.js. Stemming from a strong academic background with a Master's in Computer Visualistics and a Bachelor's in Computer Science, I have honed my skills through diverse roles that ranged from creating Olympic timing software using C# and WPF to developing engaging front-end experiences for global brands. With an analytical approach to problem-solving and a keen eye for user-centric design, my portfolio showcases a suite of applications that are as intuitive as they are impactful.
         </p>
       </section>
       <section style={{ marginBottom: '20px' }}>
@@ -41,7 +41,7 @@ export default function CV() {
               Specialize in front-end development with a focus on creating engaging user experiences.
             </li>
             <li>
-              Utilize JavaScript, Node.js, and React to build and maintain web applications.
+              Utilize TypeScript, Node.js, and React to build and maintain web applications.
             </li>
           </ul>
         </article>
@@ -101,7 +101,7 @@ export default function CV() {
 
       <section style={{ marginBottom: '20px' }}>
         <h2>Skills</h2>
-        <p>JavaScript, Node.js, React, Remix, Git, Hosting, CI/CD, Gitlab, Github, MongoDB, Mongoose, FeahtersJS</p>
+        <p>TypeScript, JavaScript, Node.js, React, Remix, Git, Hosting, CI/CD, Gitlab, Github, MongoDB, Mongoose, FeathersJS</p>
       </section>
     </div>
   );
