@@ -101,7 +101,7 @@ export default function CV() {
 
       <section style={{ marginBottom: '20px' }}>
         <h2>Skills</h2>
-        <p>TypeScript, JavaScript, Node.js, React, Remix, Git, Hosting, CI/CD, Gitlab, Github, MongoDB, Mongoose, FeathersJS</p>
+        <p>TypeScript, JavaScript, Node.js, React, Remix, Next.js, Git, Hosting, CI/CD, Gitlab, Github, MongoDB, Mongoose, FeathersJS</p>
       </section>
     </div>
   );
