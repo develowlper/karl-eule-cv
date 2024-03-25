@@ -2,8 +2,8 @@
 const personaData = {
   name: 'Daniel Schulz',
   address: 'Leipzig, Germany',
-  email: 'd.schulz@hello-sunshine.dev',
-  phone: '+49 176 30374218',
+  email: 'd.schulz [at] hello-sunshine.dev',
+
 }
 
 export default function CV() {

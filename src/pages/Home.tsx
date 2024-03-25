@@ -141,9 +141,6 @@ function HomePage(): React.ReactNode {
           </a>
         </div>
         <div>
-          Phone: <a href="tel:+4917630374218">0176-30374218</a>
-        </div>
-        <div>
           LinkedIn: <a href="https://www.linkedin.com/in/daniel-schulz-226370109/" rel="noopener noreferer" target="_blank">show profile</a>
         </div>
       </main>
