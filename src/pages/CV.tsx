@@ -11,7 +11,7 @@ export default function CV() {
     <div style={{ width: '80%', margin: 'auto' }}>
       <header style={{ marginBottom: '20px' }}>
         <h1>{personaData.name}</h1>
-        <p>{personaData.address} | <a href={personaData.email}>{personaData.email}</a> | {personaData.phone}</p>
+        <p>{personaData.address} | <a href={personaData.email}>{personaData.email}</a></p>
         {/* <p>[LinkedIn Profile] | [GitHub Profile] | [Personal Website]</p> */}
       </header>
 
