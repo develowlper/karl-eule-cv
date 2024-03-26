@@ -6,7 +6,7 @@ const techstack = getTechstack();
 export default function Header() {
   return <>
     <header className='header'>
-      <img className="profilepic" src="/profile-family.webp" alt="Daniel Schulz" />
+      <img className="profilepic" src="/profile-family-2.webp" alt="Daniel Schulz" />
       <h1>
         Hi, i'm Daniel. I'm a fullstack developer from Leipzig.
       </h1>
